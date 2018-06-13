@@ -2,23 +2,23 @@ import java.util.Scanner;
 
 class longestIncreasingSubArray{
     static int lengthOflongest(int[] arr){
-        int max = 1;
-        int len = 1;
+        int maxLength = 1;
+        int arrayLength = 1;
         for(int i=1;i<10;i++){
             if(arr[i]>arr[i-1]){
-                len++;
+                arrayLength++;
             }
             else{
-                if(max<len){
-                    max = len;
+                if(maxLength<arrayLength){
+                    maxLength = arrayLength;
                 }
-                len = 1;
+                arrayLength = 1;
             }
         }
-        if(max < len){
-            max = len;
+        if(maxLength < arrayLength){
+            maxLength = arrayLength;
         }
-        return max;
+        return maxLength;
     }
 
     public static void main(String[] args) {
